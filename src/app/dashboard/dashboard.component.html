@@ -1,0 +1,9 @@
+<h2>鬼殺隊士検索</h2>
+<div class="heroes-menu">
+  <a *ngFor="let member of members"
+      routerLink="/detail/{{member.id}}">
+      {{member.name}}
+  </a>
+</div>
+
+<app-hero-search></app-hero-search>

@@ -1,0 +1,21 @@
+<h2>鬼殺隊士</h2>
+
+<div>
+  <label for="new-member">隊士名: </label>
+  <input id="new-member" #heroName />
+
+  <!-- (click) 入力値をadd()に渡したあと、入力をクリアする -->
+  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+    入隊
+  </button>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let member of members">
+    <a routerLink="/detail/{{member.id}}">
+      <span class="badge">{{member.id}}</span> {{member.name}}
+    </a>
+    <button class="delete" title="除隊"
+      (click)="delete(member)">x</button>
+  </li>
+</ul>

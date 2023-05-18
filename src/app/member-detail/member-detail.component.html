@@ -1,0 +1,10 @@
+<div *ngIf="member">
+  <h2>{{member.name | uppercase}} 詳細</h2>
+  <div><span>id: </span>{{member.id}}</div>
+  <div>
+    <label for="hero-name">隊士名: </label>
+    <input id="hero-name" [(ngModel)]="member.name" placeholder="隊士名"/>
+  </div>
+  <button (click)="goBack()">戻る</button>
+  <button (click)="save()">保存</button>
+</div>
